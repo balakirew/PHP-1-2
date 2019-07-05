@@ -3,126 +3,125 @@
 //-----------------------------------------------------------------------------------------------------------
 echo "<h2>Задание 1</h2>" . "<br>";
 //-----------------------------------------------------------------------------------------------------------
-	$a = -15;
-	$b = -22;
+$a = -15;
+$b = -22;
 
-	function Compare($a = 0, $b = 0) {
+function compare($a = 0, $b = 0) {
 
-		if ($a >= 0 AND $b >= 0) {
-			echo $a - $b . " " . "разность a - b" . "<br>";
-		} elseif ($a <= 0 AND $b <= 0) {
-			echo $a * $b . " " . "произведение a * b" . "<br>";
-		} elseif ($a > 0 AND $b < 0 OR $a < 0 AND $b > 0) {
-			echo $a + $b . " " . "сумма a + b" . "<br>";
-		} 
-	}
+	if ($a >= 0 AND $b >= 0) {
+		echo $a - $b . " " . "разность a - b" . "<br>";
+	} elseif ($a < 0 AND $b < 0) {
+		echo $a * $b . " " . "произведение a * b" . "<br>";
+	} else {
+		echo $a + $b . " " . "сумма a + b" . "<br>";
+	} 
+}
 
-	echo "А: $a B: $b" . "<br>";
-	echo "<hr>";
+echo "А: $a B: $b" . "<br>";
+echo "<hr>";
 
-	echo Compare(10, 5) . "<br>";
-	echo Compare(-10, -5) . "<br>";
-	echo Compare(10, -5) . "<br>";
-	echo Compare(0, 0) . "<br>";
-	echo Compare() . "<br>";
-	echo Compare($a, $b) . "<br>";
+echo compare(10, 5) . "<br>";
+echo compare(-10, -5) . "<br>";
+echo compare(10, -5) . "<br>";
+echo compare(0, 0) . "<br>";
+echo compare() . "<br>";
+echo compare($a, $b) . "<br>";
 
 //-----------------------------------------------------------------------------------------------------------
 echo "<h2>Задание 2</h2>" . "<br>";
 //-----------------------------------------------------------------------------------------------------------
-	
- 	$i = 2;
 
+for ($i=0; $i <=15 ; $i++) { 
 	switch ($i) {
-    case 0:
-        echo "i равно 0";
-        break;
-    case 1:
-        echo "i равно 1";
-        break;
-    case 2:
-        echo "i равно 2";
-        break;
-    case 3:
-        echo "i равно 3";
-        break;
-    case 4:
-        echo "i равно 4";
-        break;
-    case 5:
-        echo "i равно 5";
-        break;
-    case 6:
-        echo "i равно 6";
-        break;
-    case 7:
-        echo "i равно 7";
-        break;
-    case 8:
-        echo "i равно 8";
-        break;
-    case 9:
-        echo "i равно 9";
-        break;
-    case 10:
-    	echo "i равно 10";
-    	break;
-    case 11:
-    	echo "i равно 11";
-    	break;
-    case 12:
-    	echo "i равно 12";
-    	break;
-    case 13:
-    	echo "i равно 13";
-    	break;
-    case 14:
-    	echo "i равно 14";
-    	break;
-    case 15:
-    	echo "i равно 15";
-    	break;
+		case 0:
+		echo "0, ";
+		break;		
+		case 1:
+		echo "1, ";
+		break;
+		case 2:
+		echo "2, ";
+		break;
+		case 3:
+		echo "3, ";
+		break;
+		case 4:
+		echo "4, ";
+		break;
+		case 5:
+		echo "5, ";
+		break;
+		case 6:
+		echo "6, ";
+		break;
+		case 7:
+		echo "7, ";
+		break;
+		case 8:
+		echo "8, ";
+		break;
+		case 9:
+		echo "9, ";
+		break;
+		case 10:
+		echo "10, ";
+		break;
+		case 11:
+		echo "11, ";
+		break;
+		case 12:
+		echo "12, ";
+		break;
+		case 13:
+		echo "13, ";
+		break;
+		case 14:
+		echo "14, ";
+		break;
+		case 15:
+		echo "15";
+		break;
+		
+	}
+	
 }
 
 //-----------------------------------------------------------------------------------------------------------
 echo "<h2>Задание 3</h2>" . "<br>";
 //-----------------------------------------------------------------------------------------------------------
-	$a = 2;
-	$b = 10;
+$a = 2;
+$b = 10;
 
-	function Summ($a, $b){
-		$summ = $a + $b;
-		return ($summ);
+function summ($a, $b){
+	return $a + $b;
+}
+
+function residual($a, $b){
+	return $a - $b;
+}
+
+function multiply($a, $b){
+	return $a * $b;
+}
+
+function share($a, $b){
+
+	if ($b == 0) {
+		echo "На 0 делить нельзя";
+		return(" ");
 	}
+
+	return $a / $b;
 	
-	function Residual($a, $b){
-		$residual = $a - $b;
-		return ($residual);
-	}
-	
-	function Multiply($a, $b){
-		$multiply = $a * $b;
-		return ($multiply);
-	}
-	
-	function Share($a, $b){
-		
-		if ($b == 0) {
-			echo "На 0 делить нельзя";
-			return(" ");
-		}
+}
 
-		$share = $a / $b;
-			return ($share);
-	}
+echo "А: $a B: $b" . "<br>";
+echo "<hr>";
 
-    echo "А: $a B: $b" . "<br>";
-	echo "<hr>";
-
-	echo Summ ($a, $b) . " " . "Cумма А:$a + B:$b" . "<br>";
-	echo Residual ($a, $b) . " " . "Разница А:$a - B:$b" . "<br>";
-	echo Multiply ($a, $b) . " " . "Умножение А:$a * B:$b" . "<br>";
-	echo Share ($a, $b) . " " . "Деление А:$a / B:$b" . "<br>";
+echo summ ($a, $b) . " " . "Cумма А:$a + B:$b" . "<br>";
+echo residual ($a, $b) . " " . "Разница А:$a - B:$b" . "<br>";
+echo multiply ($a, $b) . " " . "Умножение А:$a * B:$b" . "<br>";
+echo share ($a, $b) . " " . "Деление А:$a / B:$b" . "<br>";
 
 //-----------------------------------------------------------------------------------------------------------
 echo "<h2>Задание 4</h2>" . "<br>";
@@ -133,18 +132,18 @@ $arg2 = 8;
 
 function mathOperation($arg1, $arg2, $operation){
 	switch ($operation) {
-		case 'Summ':
-			echo Summ ($arg1, $arg2) . " Сумма А и B" . "<br>";
-			break;
-		case 'Residual':
-			echo Residual ($arg1, $arg2)  . " Разность А и B" . "<br>";
-			break;
-		case 'Multiply':
-			echo Multiply ($arg1, $arg2)  . " Умножение А и B" . "<br>";
-			break;
-		case 'Share':
-			echo Share ($arg1, $arg2)  . " Деление А и B" . "<br>";
-			break;
+		case 'summ':
+		echo summ ($arg1, $arg2) . " Сумма А и B" . "<br>";
+		break;
+		case 'residual':
+		echo residual ($arg1, $arg2)  . " Разность А и B" . "<br>";
+		break;
+		case 'multiply':
+		echo multiply ($arg1, $arg2)  . " Умножение А и B" . "<br>";
+		break;
+		case 'share':
+		echo share ($arg1, $arg2)  . " Деление А и B" . "<br>";
+		break;
 	}
 }
 
@@ -169,12 +168,12 @@ $data = date ( 'Y' ) ;
 	<title></title>
 </head>
 <body>
-<p>Страница HTML</p>
-<p>Страница HTML</p>
-<p>Страница HTML</p>
-<p>Страница HTML</p>
-<p>Страница HTML</p>
-<p>Страница HTML</p>
+	<p>Страница HTML</p>
+	<p>Страница HTML</p>
+	<p>Страница HTML</p>
+	<p>Страница HTML</p>
+	<p>Страница HTML</p>
+	<p>Страница HTML</p>
 </body>
 <footer>Подвал сайта <?php echo "$data";?></footer>
 </html>
@@ -188,11 +187,14 @@ $val = 12;
 $pow = 2;
 
 function power($val, $pow){
-	if ($pow != 0)
+	if ($pow > 0)
 	{
 		return $val * power ($val, $pow - 1);
+	}elseif ($pow < 0) {
+		echo "Отрицательная степень";
+		return;
 	}
-		return 1;
+	return(1);
 }
 
 echo power($val, $pow) . " - $val в степени $pow " . "<br>";
@@ -222,15 +224,15 @@ switch ($data_hour) {
 	case '18':
 	case '19':
 	case '20':
-		echo "$data_hour" . " часов " ; 
-		break;
+	echo "$data_hour" . " часов " ; 
+	break;
 	case '01':
 	case '21':
-		echo "$data_hour" . " час ";
-		break;
+	echo "$data_hour" . " час ";
+	break;
 	default:
-		echo "$data_hour" . " часа ";
-		break;
+	echo "$data_hour" . " часа ";
+	break;
 }
 
 switch ($data_minutes) {
@@ -273,15 +275,15 @@ switch ($data_minutes) {
 	case '57':
 	case '58':
 	case '59':
-		echo "$data_minutes" . " минут" .  "<br>";
-		break;
+	echo "$data_minutes" . " минут" .  "<br>";
+	break;
 	case '01':
 	case '21':
 	case '31':
 	case '41':
 	case '51':
-		echo "$data_minutes" . " минута" .  "<br>";
-		break;
+	echo "$data_minutes" . " минута" .  "<br>";
+	break;
 	case '02':
 	case '03':
 	case '04':
@@ -297,13 +299,8 @@ switch ($data_minutes) {
 	case '52':
 	case '53':
 	case '54':
-		echo "$data_minutes" . " минуты" .  "<br>";
-		break;
+	echo "$data_minutes" . " минуты" .  "<br>";
+	break;
 }
-
-
-
-
-
 
 ?>
