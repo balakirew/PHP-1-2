@@ -187,11 +187,14 @@ $val = 12;
 $pow = 2;
 
 function power($val, $pow){
-	if ($pow >= 0)
+	if ($pow > 0)
 	{
 		return $val * power ($val, $pow - 1);
+	}elseif ($pow < 0) {
+		echo "Отрицательная степень";
+		return;
 	}
-	return ("Отрицательная степень");
+	return(1);
 }
 
 echo power($val, $pow) . " - $val в степени $pow " . "<br>";
